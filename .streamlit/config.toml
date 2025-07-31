@@ -1,0 +1,13 @@
+[theme]
+primaryColor="#000000"
+backgroundColor="#000000"
+secondaryBackgroundColor="#000000"
+textColor="#ffffff"
+font="monospace"
+
+[client]
+toolbarMode = "viewer"
+
+[ui]
+hideTopBar=true
+
