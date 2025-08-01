@@ -54,7 +54,7 @@ st.write("")
 # command to insert an image, center it, and set size using HTML/CSS
 st.markdown("""
 <div style="text-align: center;">
-    <img src="https://raw.githubusercontent.com/digi-pidgey/images/refs/heads/main/digipidgey.png" 
+    <img src="https://raw.githubusercontent.com/digi-pidgey/digi-pidgey.com/refs/heads/main/images/digipidgey.png" 
     style="width: 60px; display: block; margin: 0 auto;">
 </div>
 """, unsafe_allow_html=True)
