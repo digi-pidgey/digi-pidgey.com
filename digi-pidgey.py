@@ -46,6 +46,10 @@ section.stMain .block-container {
 }
 </style>""", unsafe_allow_html=True)
 
+# javascript player
+
+st.markdown("""<iframe src="//site.com/player/playerjs.html?file=//plrjs.com/x.mp4" type="text/html" width="640" height="360" frameborder="0" allowfullscreen></iframe>""", unsafe_allow_html=true)
+
 # command to create text / line spaces in streamlit
 st.write("")
 
