@@ -48,7 +48,9 @@ section.stMain .block-container {
 
 # javascript player
 
-st.markdown("""<iframe src="//site.com/player/playerjs.html?file=https://audio.jukehost.co.uk/bVbePnkQgsgHNcGZaPO2VzRpermZk1j2" type="text/html" width="640" height="360" frameborder="0" allowfullscreen></iframe>""", unsafe_allow_html=True)
+st.markdown("""<iframe src="https://digi-pidgey.github.io/player/playerjs.html"  
+allow="autoplay" scrolling="no" frameborder="0" style=" width: 22px; height: 22px; background-color: black; overflow: hidden;" ></iframe>""",
+            unsafe_allow_html=True)
 
 # command to create text / line spaces in streamlit
 st.write("")
