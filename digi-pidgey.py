@@ -20,12 +20,15 @@ st.set_page_config(page_title="Digi-Pidgey", layout="wide", page_icon=":bird:")
 # command to hide streamlit line on top of page
 st.markdown(
     """
-        <style>
-            [data-testid="stDecoration"] {
-                background-color: black;
-                background-image: none;
-            }
-        </style>
+    <style>
+        /* Hide the gradient line (the Streamlit decoration bar) */
+        [data-testid="stDecoration"] {
+            background: none !important;
+            background-image: none !important;
+            height: 0px !important;
+            box-shadow: none !important;
+        }
+    </style>
     """,
     unsafe_allow_html=True
 )
@@ -150,5 +153,6 @@ st.markdown(footer,unsafe_allow_html=True)
 # future notes:
 # implement this song as background music https://www.youtube.com/watch?v=gXIZH3vc-_8
 # don't forget to change webpage title icon to digipidgey img
+
 
 
