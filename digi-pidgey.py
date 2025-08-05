@@ -17,6 +17,19 @@ import streamlit.components.v1 as components
 # command to title a webpage
 st.set_page_config(page_title="Digi-Pidgey", layout="wide", page_icon=":bird:")
 
+# command to hide streamlit line on top of page
+st.markdown(
+    """
+        <style>
+            [data-testid="stDecoration"] {
+                background-color: aqua;
+                background-image: none;
+            }
+        </style>
+    """,
+    unsafe_allow_html=True
+)
+
 #commands to hide the top margin/deploy buttons for streamlit
 st.markdown("""
          <style>
@@ -137,3 +150,4 @@ st.markdown(footer,unsafe_allow_html=True)
 # future notes:
 # implement this song as background music https://www.youtube.com/watch?v=gXIZH3vc-_8
 # don't forget to change webpage title icon to digipidgey img
+
