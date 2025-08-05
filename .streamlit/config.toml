@@ -11,3 +11,5 @@ toolbarMode = "viewer"
 [ui]
 hideTopBar=true
 
+[browser]
+gatherUsageStats = false
