@@ -44,6 +44,28 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+st.markdown(
+    """
+    <style>
+        /* Optional: hide the bar via CSS (backup) */
+        [data-testid="stDecoration"] {
+            display: none !important;
+            visibility: hidden !important;
+            height: 0px !important;
+        }
+    </style>
+
+    <script>
+        // Fully remove the element from the DOM
+        const decorationBar = window.parent.document.querySelector('[data-testid="stDecoration"]');
+        if (decorationBar) {
+            decorationBar.remove();
+        }
+    </script>
+    """,
+    unsafe_allow_html=True
+)
+
 #commands to hide the top margin/deploy buttons for streamlit
 st.markdown("""
          <style>
@@ -164,6 +186,7 @@ st.markdown(footer,unsafe_allow_html=True)
 # future notes:
 # implement this song as background music https://www.youtube.com/watch?v=gXIZH3vc-_8
 # don't forget to change webpage title icon to digipidgey img
+
 
 
 
