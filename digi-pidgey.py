@@ -18,27 +18,29 @@ import streamlit.components.v1 as components
 st.set_page_config(page_title="Digi-Pidgey", layout="wide", page_icon=":bird:")
 
 # command to hide streamlit line on top of page
-st.markdown(
-    """
+st.markdown("""
     <style>
-        /* Optional: hide the bar via CSS (backup) */
-        [data-testid="stDecoration"] {
-            display: none !important;
-            visibility: hidden !important;
-            height: 0px !important;
-        }
+    /* Completely disable the Streamlit decoration gradient */
+    [data-testid="stDecoration"] {
+        background: none !important;
+        background-image: none !important;
+        height: 0px !important;
+        visibility: hidden !important;
+        display: none !important;
+        box-shadow: none !important;
+        position: absolute !important;
+        top: -9999px !important;
+        z-index: -1 !important;
+        opacity: 0 !important;
+        transition: none !important;
+        animation: none !important;
+    }
+    html, body {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
     </style>
-
-    <script>
-        // Fully remove the element from the DOM
-        const decorationBar = window.parent.document.querySelector('[data-testid="stDecoration"]');
-        if (decorationBar) {
-            decorationBar.remove();
-        }
-    </script>
-    """,
-    unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
 
 #commands to hide the top margin/deploy buttons for streamlit
 st.markdown("""
@@ -160,6 +162,7 @@ st.markdown(footer,unsafe_allow_html=True)
 # future notes:
 # implement this song as background music https://www.youtube.com/watch?v=gXIZH3vc-_8
 # don't forget to change webpage title icon to digipidgey img
+
 
 
 
