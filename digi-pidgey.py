@@ -21,32 +21,6 @@ st.set_page_config(page_title="Digi-Pidgey", layout="wide", page_icon=":bird:")
 st.markdown(
     """
     <style>
-        /* Hide the gradient line (the Streamlit decoration bar) */
-        [data-testid="stDecoration"] {
-            background: none !important;
-            background-image: none !important;
-            height: 0px !important;
-            box-shadow: none !important;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    """
-    <style>
-        /* Hide Streamlit's default hamburger menu and footer */
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    """
-    <style>
         /* Optional: hide the bar via CSS (backup) */
         [data-testid="stDecoration"] {
             display: none !important;
@@ -186,6 +160,7 @@ st.markdown(footer,unsafe_allow_html=True)
 # future notes:
 # implement this song as background music https://www.youtube.com/watch?v=gXIZH3vc-_8
 # don't forget to change webpage title icon to digipidgey img
+
 
 
 
