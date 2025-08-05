@@ -22,7 +22,7 @@ st.markdown(
     """
         <style>
             [data-testid="stDecoration"] {
-                background-color: aqua;
+                background-color: black;
                 background-image: none;
             }
         </style>
@@ -150,4 +150,5 @@ st.markdown(footer,unsafe_allow_html=True)
 # future notes:
 # implement this song as background music https://www.youtube.com/watch?v=gXIZH3vc-_8
 # don't forget to change webpage title icon to digipidgey img
+
 
