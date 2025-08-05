@@ -20,26 +20,45 @@ st.set_page_config(page_title="Digi-Pidgey", layout="wide", page_icon=":bird:")
 # command to hide streamlit line on top of page
 st.markdown("""
     <style>
-    /* Completely disable the Streamlit decoration gradient */
-    [data-testid="stDecoration"] {
-        background: none !important;
-        background-image: none !important;
-        height: 0px !important;
-        visibility: hidden !important;
-        display: none !important;
-        box-shadow: none !important;
-        position: absolute !important;
-        top: -9999px !important;
-        z-index: -1 !important;
-        opacity: 0 !important;
-        transition: none !important;
-        animation: none !important;
-    }
     html, body {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    [data-testid="stDecoration"] {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0px !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        position: absolute !important;
+        top: -1000px !important;
     }
     </style>
+
+    <script>
+    const killBar = () => {
+        const deco = document.querySelector('[data-testid="stDecoration"]');
+        if (deco) {
+            deco.style.display = "none";
+            deco.style.visibility = "hidden";
+            deco.style.height = "0px";
+            deco.style.opacity = "0";
+            deco.style.pointerEvents = "none";
+            deco.style.position = "absolute";
+            deco.style.top = "-1000px";
+        }
+    }
+
+    // Attempt to kill it immediately and repeatedly
+    killBar();
+    const interval = setInterval(() => {
+        killBar();
+    }, 10);
+
+    setTimeout(() => {
+        clearInterval(interval);
+    }, 500); // stop retrying after half a second
+    </script>
 """, unsafe_allow_html=True)
 
 #commands to hide the top margin/deploy buttons for streamlit
@@ -162,6 +181,7 @@ st.markdown(footer,unsafe_allow_html=True)
 # future notes:
 # implement this song as background music https://www.youtube.com/watch?v=gXIZH3vc-_8
 # don't forget to change webpage title icon to digipidgey img
+
 
 
 
