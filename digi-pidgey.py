@@ -18,47 +18,20 @@ import streamlit.components.v1 as components
 st.set_page_config(page_title="Digi-Pidgey", layout="wide", page_icon=":bird:")
 
 # command to hide streamlit line on top of page
+
 st.markdown("""
-    <style>
-    html, body {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-    [data-testid="stDecoration"] {
-        display: none !important;
-        visibility: hidden !important;
-        height: 0px !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
-        position: absolute !important;
-        top: -1000px !important;
-    }
-    </style>
-
-    <script>
-    const killBar = () => {
-        const deco = document.querySelector('[data-testid="stDecoration"]');
-        if (deco) {
-            deco.style.display = "none";
-            deco.style.visibility = "hidden";
-            deco.style.height = "0px";
-            deco.style.opacity = "0";
-            deco.style.pointerEvents = "none";
-            deco.style.position = "absolute";
-            deco.style.top = "-1000px";
-        }
-    }
-
-    // Attempt to kill it immediately and repeatedly
-    killBar();
-    const interval = setInterval(() => {
-        killBar();
-    }, 10);
-
-    setTimeout(() => {
-        clearInterval(interval);
-    }, 500); // stop retrying after half a second
-    </script>
+<style>
+  [data-testid="stDecoration"] {
+    display: none !important;
+  }
+  header {
+    visibility: hidden !important;
+  }
+  /* Remove top padding margin that shifts layout */
+  #root > div:nth-child(1) > div > div > div > div > section > div {
+    padding-top: 0 !important;
+  }
+</style>
 """, unsafe_allow_html=True)
 
 #commands to hide the top margin/deploy buttons for streamlit
@@ -181,6 +154,7 @@ st.markdown(footer,unsafe_allow_html=True)
 # future notes:
 # implement this song as background music https://www.youtube.com/watch?v=gXIZH3vc-_8
 # don't forget to change webpage title icon to digipidgey img
+
 
 
 
