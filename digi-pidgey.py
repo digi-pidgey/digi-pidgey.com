@@ -33,6 +33,17 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+st.markdown(
+    """
+    <style>
+        /* Hide Streamlit's default hamburger menu and footer */
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 #commands to hide the top margin/deploy buttons for streamlit
 st.markdown("""
          <style>
@@ -153,6 +164,7 @@ st.markdown(footer,unsafe_allow_html=True)
 # future notes:
 # implement this song as background music https://www.youtube.com/watch?v=gXIZH3vc-_8
 # don't forget to change webpage title icon to digipidgey img
+
 
 
 
